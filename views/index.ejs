@@ -1,0 +1,35 @@
+<%- include("partials/header.ejs") %>
+<body>
+    <div class="main">
+        <h1>My Blogs</h1>
+
+        <ul>
+            <% if(locals.blogList.length !== 0){%>
+                <% blogList.forEach((blog) => {%>
+                <div class="blog-li">
+                    <a class = "blog" href = <%= "/read?id="+blog.id  %>>
+                        <%= blog.blog_title %>
+                    </a><br>
+
+
+                </div>
+                    
+                <%}); %>
+
+            <%}else{%>
+                <a class="iflenzero" href="/create"> No Blogs Yet. Create one </a>
+           <% } %>
+        </ul>
+
+        <div class="create_new">
+            
+            <a class="create_new_a" href="/create"><img src="images/plus-lg.svg" alt=""></a>
+        </div>
+    </div>
+
+<%- include("partials/footer.ejs") %>
+
+    
+    
+</body>
+</html>

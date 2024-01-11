@@ -1,0 +1,27 @@
+<%- include("partials/header.ejs") %>
+<body>
+    <div class="create">
+
+        
+        <form action="/save" method="POST">
+            <div class="title">
+                
+                <label class="title_l" for="title">Title</label>
+                <input class="title_i" type="text" name="title"><br>
+            </div>
+            
+            <div class="content">
+                
+                <label class="content_l" for="content">Content</label>
+                <textarea class="content_i" name="content" cols="170" rows="70"></textarea><br>
+                
+            </div>
+            
+            <input type="submit" value="Submit">
+        </form>
+        
+        <%- include("partials/footer.ejs") %>
+        
+    </div>
+    </body>
+</html>

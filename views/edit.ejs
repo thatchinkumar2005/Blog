@@ -1,0 +1,35 @@
+<%- include("partials/header.ejs") %>
+<body>
+    <div class="edit">
+    <form action=<%= "/edit_save?id="+ id %> method="POST">
+
+        <div class="title">
+            
+            <label class="title_l" for="title">Title</label>
+            <input class="title_i" type="text" name="title" value = <%= blog_title  %>><br>
+        </div>
+
+        <div class="content">
+            
+            <label class="content_l" for="content">Content</label>
+            <textarea class="content_i" name="content" cols="170" rows="70" ><%= content %></textarea><br>
+        </div>
+
+        <div class="save">
+
+            <input type="submit" value="Submit">
+            <a href = <%= "/delete?id="+id %> >Delete Blog</a>
+
+        </div>
+
+        
+    </form>
+
+</div>
+
+    
+
+    <%- include("partials/footer.ejs") %>
+    
+</body>
+</html>

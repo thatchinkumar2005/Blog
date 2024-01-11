@@ -1,0 +1,6 @@
+{
+    "blog_id" : 1,
+    "blog_title" : "new_blog_title",
+    "content" : "new_blog_content",
+    "author" : "me"
+}
